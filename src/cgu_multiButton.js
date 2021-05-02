@@ -12,10 +12,14 @@ const changeText=(event)=>{
 
 const MultiButton=(num)=>{
     var output=[];
-    for(let i=1;i<num+1;++i){
-        output.push(<Button variant="contained" color="primary" onClick={changeText}>第{i}個按鍵</Button>)
+    output.push(
+    <IconButton color="primary" aria-label="add to shopping cart">
+    <AddShoppingCartIcon /></IconButton>)
+    output.push(<IconButton color="primary" aria-label="delete">
+        <DeleteIcon /></IconButton>)
+        output.push(<IconButton color="primary" aria-label="add an alarm">
+            <AlarmIcon /></IconButton>)
+            return output;
     }
-    return output;
-}
 
 export default MultiButton;
